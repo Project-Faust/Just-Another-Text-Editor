@@ -18,17 +18,19 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
+      ['@babel/plugin-proposal-object-rest-spread'],
       new HtmlWebpackPlugin({
         template: './index.html',
+        // Add the following line to configure the Babel plugin
         babel: {
           plugins: ['@babel/plugin-proposal-object-rest-spread'],
         },
       }),
-
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'sw.js',
       }),
+
       new WebpackPwaManifest({
         name: 'Just Another Text Editor',
         short_name: 'JATE',
