@@ -18,15 +18,15 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      ['@babel / plugin - proposal - object - rest - spread'],
+      ['@babel/plugin-proposal-object-rest-spread'],
       new HtmlWebpackPlugin({
         template: './index.html',
       }),
       // new WorkboxPlugin.GenerateSW(),
       new InjectManifest({
-        swSrc: "./src-sw.js",
-        swDest: "sw.js",
-      }),
+        swSrc: './src-sw.js',
+        swDest: 'sw.js',
+      }),      
       new WebpackPwaManifest({
         name: 'Just Another Text Editor',
         short_name: 'JATE',
