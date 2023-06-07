@@ -21,7 +21,7 @@ module.exports = () => {
       new HtmlWebpackPlugin({
         template: './index.html',
       }),
-      new WorkboxPlugin.GenerateSW(),
+      // new WorkboxPlugin.GenerateSW(),
       new InjectManifest({
         swSrc: "./src-sw.js",
         swDest: "src-sw.js",
