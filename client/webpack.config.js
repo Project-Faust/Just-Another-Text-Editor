@@ -18,6 +18,7 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
+      ['@babel / plugin - proposal - object - rest - spread'],
       new HtmlWebpackPlugin({
         template: './index.html',
       }),
